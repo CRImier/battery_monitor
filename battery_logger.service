@@ -1,0 +1,11 @@
+[Unit]
+Description=Battery logger using a MAX1704x module
+
+[Service]
+PIDFile=/run/battery.pid
+ExecStart=/root/battery_monitor/battery_logger.py 
+WorkingDirectory=/root/battery_monitor/
+Restart=always
+
+[Install]
+WantedBy=getty.target
